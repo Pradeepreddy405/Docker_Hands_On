@@ -29,9 +29,8 @@ Docker storage defines how container data is stored, shared, and persisted beyon
 		Container layer	: Thin writable layer created on top of image layers. Stores runtime changes like.
 						- Logs
 						- Temporary files
-						- Runtime configurations
-						
-		Note : This writable layer is lost when the container is removed, which is why persistent data should be managed using  volumes or bind mounts in                   production.
+						- Runtime configurations					
+ NOTE : This writable layer is lost when the container is removed, which is why persistent data should be managed using  volumes or bind mounts in                   production.
 	
 2. 	Storage Drivers
 		Storage drivers manage the image layers and the container writable layer.
