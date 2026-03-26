@@ -46,10 +46,9 @@ Docker storage defines how container data is stored, shared, and persisted beyon
 		They implement copy-on-write (CoW) to efficiently manage changes without duplicating the entire image.
 	
 3. 𝗩𝗢𝗟𝗨𝗠𝗘𝗦 𝗔𝗡𝗗 𝗣𝗘𝗥𝗦𝗜𝗦𝗧𝗘𝗡𝗧 𝗦𝗧𝗢𝗥𝗔𝗚𝗘 : Since container layers are ephemeral, Docker provides volumes for persistent storage :
-	
-	1 Volumes			: Managed by Docker, can be shared across containers.
-	2 Bind mounts		: Map host directories into containers, useful for development.
-	3 tmpfs mounts	: Store data in RAM, data disappears when container stops.
+- 1 Volumes			: Managed by Docker, can be shared across containers.
+- 2 Bind mounts		: Map host directories into containers, useful for development.
+- 3 tmpfs mounts	: Store data in RAM, data disappears when container stops.
 	
 4.	𝗡𝗔𝗠𝗘𝗗 𝗩𝗢𝗟𝗨𝗠𝗘𝗦
 		Volumes can be named or anonymous. 
