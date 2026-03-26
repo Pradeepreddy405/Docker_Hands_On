@@ -52,7 +52,7 @@ Docker also provides a **rich ecosystem** including **Docker Engine, Docker CLI,
 ## 3. Docker Architecture
     
 <p align="center">
-    <img src="./03_Docker_architecture.png" width="700" alt="Docker Architecture">
+  <img src="Images/03_Docker_architecture.png" width="700" alt="Docker Architecture">
 </p>
 
       
