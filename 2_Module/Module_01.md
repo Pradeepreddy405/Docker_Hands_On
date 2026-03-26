@@ -114,16 +114,16 @@
 
 ## 5) Best Practices for Dockerfile Optimization
 
-  1. **Use minimal base images**
+## 1. **Use minimal base images**
      
 	```
 	FROM node:18-alpine       
 	```
-  - Smaller image size  
-  - Faster pulls  
-  - Reduced attack surface  
+   - Smaller image size  
+   - Faster pulls  
+   - Reduced attack surface  
 	
- 2. **Use multi-stage builds**
+## 2. **Use multi-stage builds**
 
 	```
 	FROM node:18 AS build
@@ -136,26 +136,26 @@
   - Removes build tools from runtime image  
   - Standard in production to separate build-time and runtime concerns  
 	
-3. **Minimize number of layers**
+## 3. **Minimize number of layers**
 		```
 		RUN apt update && apt install -y curl
 		```
-	- Combine related RUN commands  
+   - Combine related RUN commands  
 	
-4. **Avoid running containers as root**
+## 4. **Avoid running containers as root**
 	```dockerfile
 	USER node
 	```
-	- Improves security  
+   - Improves security  
 	
-5. **Use `.dockerignore`**
-	- Prevents unnecessary files from entering the image  
-	- Reduces build time and image size  
+## 5. **Use `.dockerignore`**
+   - Prevents unnecessary files from entering the image  
+   - Reduces build time and image size  
 	
-6. **Prefer COPY over ADD**
-	- COPY is **explicit and predictable**  
-	- ADD has extra behavior (auto-extract, URLs)	
-	- Dockerfile optimization impacts **image size**, **security**, **deployment speed**, and **scalability** in production environments.
+## 6. **Prefer COPY over ADD**
+   - COPY is **explicit and predictable**  
+   - ADD has extra behavior (auto-extract, URLs)	
+   - Dockerfile optimization impacts **image size**, **security**, **deployment speed**, and **scalability** in production environments.
 	
 ---
 
