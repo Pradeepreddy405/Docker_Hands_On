@@ -24,7 +24,8 @@ Docker Engine is the core runtime that " BUILDS ", " RUNS " , and " MANAGES " th
 
 Docker storage defines how container data is stored, shared, and persisted beyond the container's lifecycle. Since containers are ephemeral by nature, Docker provides mechanisms to manage application data and stateful data efficiently.
 
-	1. Layered Filesystem
+𝟭. 𝗟𝗔𝗬𝗘𝗥𝗘𝗗 𝗙𝗜𝗟𝗘𝗦𝗬𝗦𝗧𝗘𝗠
+
 		Docker uses a layered filesystem
 		Image layers	: Immutable and read-only and shared across the container for effective disk space
 		Container layer	: Thin writable layer created on top of image layers. Stores runtime changes like.
