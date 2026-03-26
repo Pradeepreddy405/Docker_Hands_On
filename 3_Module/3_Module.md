@@ -1,6 +1,6 @@
 ###	1)		Docker Engine
 
-Docker Engine is the core runtime that builds, runs, and manages containers by interacting with the host OS kernel and system resources.
+Docker Engine is the core runtime that " builds ", " runs " , and " manages " the containers by interacting with the host OS kernel and system resources.
 		
 				Docker CLI  →  Docker REST API  →  Docker Daemon (dockerd)
 														|
