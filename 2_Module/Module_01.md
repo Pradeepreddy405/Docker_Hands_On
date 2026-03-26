@@ -70,10 +70,9 @@
 	
 ---	
 ## 4) Understanding Layers and Caching
-  ### 1) Docker Image Layers
-        
-		Docker images are a **stack of layers**, not a single file.
-		Example Dockerfile layers:
+  ### 1) Docker Image Layers  
+   Docker images are a **stack of layers**, not a single file.
+   Example Dockerfile layers:
 		
 		| Instruction | Layer 							|
 		|-------------|---------------------------------|
