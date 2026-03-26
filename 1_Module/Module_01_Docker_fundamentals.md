@@ -35,6 +35,11 @@ Docker also provides a **rich ecosystem** including **Docker Engine, Docker CLI,
 - Containers are **lightweight environments** that package the application, dependencies, and runtime.
 - Containers **share the host OS kernel** and provide **process-level isolation**.
 
+  ### Virtual Machines vs Containers
+      <p align="center">
+          <img src="Images/02_virtual_machines_vs_contianers.png" width="700" alt="Virtual_machines_vs_Contianers"> 
+      </p>
+
 ### Key Comparison
 
 | Feature | Containers | Virtual Machines |
