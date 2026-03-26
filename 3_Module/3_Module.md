@@ -33,8 +33,8 @@ Docker storage defines how container data is stored, shared, and persisted beyon
 						- Runtime configurations					
  NOTE : This writable layer is lost when the container is removed, which is why persistent data should be managed using  volumes or bind mounts in                   production.
 	
-2. 	Storage Drivers
-		Storage drivers manage the image layers and the container writable layer.
+2. 	𝗦𝗧𝗢𝗥𝗔𝗚𝗘 𝗗𝗥𝗜𝗩𝗘𝗥𝗦
+	Storage drivers manage the image layers and the container writable layer.
 		
 			Common storage drivers include:
 				- overlay2 (most common for Linux)
@@ -44,13 +44,13 @@ Docker storage defines how container data is stored, shared, and persisted beyon
 		
 		They implement copy-on-write (CoW) to efficiently manage changes without duplicating the entire image.
 	
-3. 	Volumes and Persistent Storage
+3. 𝗩𝗢𝗟𝗨𝗠𝗘𝗦 𝗔𝗡𝗗 𝗣𝗘𝗥𝗦𝗜𝗦𝗧𝗘𝗡𝗧 𝗦𝗧𝗢𝗥𝗔𝗚𝗘
 		Since container layers are ephemeral, Docker provides volumes for persistent storage:
 		Volumes			: Managed by Docker, can be shared across containers.
 		Bind mounts		: Map host directories into containers, useful for development.
 		tmpfs mounts	: Store data in RAM, data disappears when container stops.
 	
-4.	Named Volumes
+4.	𝗡𝗔𝗠𝗘𝗗 𝗩𝗢𝗟𝗨𝗠𝗘𝗦
 		Volumes can be named or anonymous. 
 		Named volumes make it easier to reuse data across containers.
 
@@ -64,7 +64,8 @@ Docker storage defines how container data is stored, shared, and persisted beyon
 			- Persistent even if container is removed
 			- Can be shared across multiple containers
 			- Independent of container lifecycle
-5. 	Inspecting Volumes
+  	
+6. 	𝗜𝗡𝗦𝗣𝗘𝗖𝗧𝗜𝗡𝗚 𝗩𝗢𝗟𝗨𝗠𝗘𝗦
 		List all volumes			:	docker volume ls
 		Inspect a specific volume	:	docker volume inspect mydata
 		Remove a volume	:	docker volume rm mydata
