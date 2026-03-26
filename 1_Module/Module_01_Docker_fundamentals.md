@@ -17,8 +17,8 @@ Docker also provides a **rich ecosystem** including **Docker Engine, Docker CLI,
 ### Docker Components
 
 - **Docker Engine** – Runs and manages containers.
-- **Docker CLI** – Command-line interface used to interact with Docker Engine.
-- **Docker Hub** – Image registry to store and share Docker images.
+- **Docker CLI**    – Command-line interface used to interact with Docker Engine.
+- **Docker Hub**    – Image registry to store and share Docker images.
 
 ---
 
