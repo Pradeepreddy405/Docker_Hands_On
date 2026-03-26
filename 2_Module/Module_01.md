@@ -47,14 +47,14 @@
 	  - Docker images are built from a Dockerfile using the `docker build` command.
 		
 		```bash
-		docker build -t Application_name:Version_1.0 .
+		**docker build -t Application_name:Version_1.0 .**
 		```
 
 	  - `-t` : Assigns name and tag  
 	  - `.`   : Build context (current directory) — the directory Docker uses to access files during image creation  
 	  - Docker reads the Dockerfile **instruction by instruction**  
 	  - Each instruction creates a new **immutable layer**
-   - 
+    
   2) Tagging images
 	  - Tags are used for **versioning** and **release management**.
 		
