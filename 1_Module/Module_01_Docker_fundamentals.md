@@ -6,7 +6,7 @@
 
 Docker is an **open-source containerization platform** used to **build, ship, and run applications** in isolated environments called **containers**.
 
-Containers package:
+  Containers package :
 - Application code
 - Dependencies
 - Runtime
