@@ -48,6 +48,8 @@ Docker storage defines how container data is stored, shared, and persisted beyon
 3. 𝗩𝗢𝗟𝗨𝗠𝗘𝗦 𝗔𝗡𝗗 𝗣𝗘𝗥𝗦𝗜𝗦𝗧𝗘𝗡𝗧 𝗦𝗧𝗢𝗥𝗔𝗚𝗘 : Since container layers are ephemeral, Docker provides volumes for persistent storage :
 - 1 Volumes			: Managed by Docker, can be shared across containers.
 - 2 Bind mounts		: Map host directories into containers, useful for development.
+  					  Bind mounts are tightly coupled to host filesystem paths, so they are not portable across environments. If the container is moved to another host, the mounted path may not exist, leading to data loss or failure. That’s why bind mounts are mainly used in development, while Docker volumes are preferred in production for portability and reliability
+  
 - 3 tmpfs mounts	: Store data in RAM, data disappears when container stops.
 	
 4.	𝗡𝗔𝗠𝗘𝗗 𝗩𝗢𝗟𝗨𝗠𝗘𝗦
