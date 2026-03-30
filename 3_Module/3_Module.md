@@ -66,9 +66,9 @@ Docker storage defines how container data is stored, shared, and persisted beyon
 			- Independent of container lifecycle
   	
 6. 	𝗜𝗡𝗦𝗣𝗘𝗖𝗧𝗜𝗡𝗚 𝗩𝗢𝗟𝗨𝗠𝗘𝗦
-		List all volumes			:	docker volume ls
-		Inspect a specific volume	:	docker volume inspect mydata
-		Remove a volume	:	docker volume rm mydata
+	 - List all volumes		     	:	docker volume ls
+	 - Inspect a specific volume	:	docker volume inspect mydata
+	 - Remove a volume	            :	docker volume rm mydata
 		
 
 	
