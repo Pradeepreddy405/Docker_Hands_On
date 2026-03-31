@@ -4,13 +4,13 @@ Docker Volumes Hands-On Labs
 
 Goal: Understand that container data is lost when the container is removed.
 
-# Run a container
+#### Run a container
 docker run -it --name ephemeral ubuntu:22.04
 echo "Temporary data" > /data.txt
 cat /data.txt
 exit
 
-# Remove container
+#### Remove container
 docker rm ephemeral
 
 Observation: Any files inside the container are lost.
@@ -23,15 +23,15 @@ Takeaway: Containers are ephemeral. Critical data must be stored outside.
 
 Goal: Persist data across containers using named volumes.
 
-# Create a named volume
+#### Create a named volume
 docker volume create myvolume
 
-# Start a container with the volume
+#### Start a container with the volume
 docker run -it --name volume-container -v myvolume:/app ubuntu:22.04
 echo "Persistent data" > /app/data.txt
 exit
 
-# Start a new container using the same volume
+#### Start a new container using the same volume
 docker run -it --name new-container -v myvolume:/app ubuntu:22.04
 cat /app/data.txt
 
@@ -57,18 +57,18 @@ Takeaway: Anonymous volumes are temporary and harder to manage.
 
 Goal: Compare different types of container storage.
 
-# Bind mount (maps host directory)
+#### Bind mount (maps host directory)
 mkdir -p ~/hostdata
 docker run -it -v ~/hostdata:/app ubuntu:22.04
 echo "Host bind mount" > /app/data.txt
 exit
 
-# tmpfs (memory only)
+#### tmpfs (memory only)
 docker run -it --tmpfs /app ubuntu:22.04
 echo "tmpfs memory data" > /app/data.txt
 exit
 
-# Named Docker volume
+#### Named Docker volume
 docker volume create prodvolume
 docker run -it -v prodvolume:/app ubuntu:22.04
 echo "Docker volume data" > /app/data.txt
@@ -79,7 +79,7 @@ Takeaways:
 Bind mount: Flexible, not portable.
 tmpfs: Fast, ephemeral, lost on stop.
 Docker volume: Managed by Docker, persistent, production-ready.
-## Lab 5: Real Application – Flask + Persistent Data
+#### Lab 5: Real Application – Flask + Persistent Data
 
 Goal: Apply Docker volumes with a real app.
 
@@ -132,12 +132,12 @@ Takeaway: Persistent data survives container restarts.
 
 Goal: Share data between containers.
 
-# Writer container
+#### Writer container
 docker run -it --name writer -v shared:/data ubuntu:22.04
 echo "Shared between containers" > /data/shared.txt
 exit
 
-# Reader container
+#### Reader container
 docker run -it --name reader -v shared:/data ubuntu:22.04
 cat /data/shared.txt
 
@@ -149,11 +149,11 @@ Takeaway: Volumes allow multiple containers to share data safely.
 
 Goal: Learn how to backup and restore volumes.
 
-# Backup
+#### Backup
 docker run --rm -v flaskdata:/data -v $(pwd):/backup ubuntu \
     tar cvf /backup/flaskdata_backup.tar /data
 
-# Restore
+#### Restore
 docker run --rm -v flaskdata:/data -v $(pwd):/backup ubuntu \
     bash -c "cd /data && tar xvf /backup/flaskdata_backup.tar --strip 1"
 
