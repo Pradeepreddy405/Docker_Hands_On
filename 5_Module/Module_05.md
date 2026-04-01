@@ -7,16 +7,16 @@ Docker Compose is a declarative orchestration tool used to define, configure, an
    - Dependencies	
 			
 Problems before docker-compose	
-				- Developers manually ran containers
-				- Hard to track startup order
-				- Networking was error-prone
-				- Environment parity was poor	
+   - Developers manually ran containers
+   - Hard to track startup order
+   - Networking was error-prone
+   - Environment parity was poor	
 				
 Docker Compose solves:			
-				- Service coordination
-				- Consistent environments
-				- Local production parity
-				- Repeatable deployments	
+   - Service coordination
+   - Consistent environments
+   - Local production parity
+   - Repeatable deployments	
 
 
 		
