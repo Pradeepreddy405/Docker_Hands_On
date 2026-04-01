@@ -32,8 +32,7 @@ Docker Compose solves:
 				secrets:              # Sensitive data (Swarm)
 			'''
 			
-###	3) Docker compose key components	
-			version, services, networks, volumes, ports, depends on, restart			
+###	3) Docker compose key components	: version, services, networks, volumes, ports, depends on, restart			
 			3.1 version
 					Defines Compose file format
 			3.2 services
